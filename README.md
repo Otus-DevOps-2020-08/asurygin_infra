@@ -1,2 +1,2 @@
 # asurygin_infra
-asurygin repository
+asurygin repository infra
