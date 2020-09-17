@@ -13,8 +13,10 @@ someinternalhost =1 0.129.0.17
 
 Задание 2
 Для подключения командой someinternalhost к серверу необходимо сделать алиас на рабочей машине
+```
+cat ~/.bashrc
 
-```cat ~/.bashrc```
-```alias someinternalhost='ssh  -i ~/.ssh/id_rsa -AJ  appuser@84.201.177.164 appuser@10.129.0.17'```
+alias someinternalhost='ssh  -i ~/.ssh/id_rsa -AJ  appuser@84.201.177.164 appuser@10.129.0.17'
 
-```source ~/.bashrc```
+source ~/.bashrc
+   
