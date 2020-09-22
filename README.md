@@ -1,20 +1,19 @@
 
 ## Домашние задание №6
 
-bastion_IP = 84.201.141.84
+testapp_IP = 84.201.139.144
+testapp_port = 9292
 
-someinternalhost_IP  = 10.129.0.17
-
+### Создание машин с помощью metadata.yaml
 
 ```
- ssh  -i ~/.ssh/id_rsa -AJ  appuser@84.201.141.84 appuser@10.129.0.17
+yc compute instance create \
+  --name reddit-app \
+  --hostname reddit-app \
+  --memory=4 \
+  --create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-lts,size=10GB \
+  --network-interface subnet-name=default-ru-central1-b,nat-ip-version=ipv4 \
+  --metadata serial-port-enable=1 \
+  --metadata-from-file user-data=./metadata.yaml
+
 ```
-
-Задание 2
-Для подключения командой someinternalhost к серверу необходимо сделать алиас на рабочей машине
-```
-cat ~/.bashrc
-
-alias someinternalhost='ssh  -i ~/.ssh/id_rsa -AJ  appuser@84.201.141.84 appuser@10.129.0.17'
-
-source ~/.bashrc
