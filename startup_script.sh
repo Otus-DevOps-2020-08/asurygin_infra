@@ -1,12 +1,5 @@
+#!/bin/bash
 
-## Домашние задание №6
-
-testapp_IP = 84.201.177.142
-testapp_port = 9292
-
-### Создание машин с помощью metadata.yaml
-
-```
 yc compute instance create \
   --name reddit-app \
   --hostname reddit-app \
@@ -15,5 +8,3 @@ yc compute instance create \
   --network-interface subnet-name=default-ru-central1-b,nat-ip-version=ipv4 \
   --metadata serial-port-enable=1 \
   --metadata-from-file user-data=./metadata.yaml
-
-```
