@@ -23,6 +23,12 @@ variable service_account_key_file{
   description = "terraform-key.json"
 }
 
+variable private_key_path {
+  description = "Path to the private key used for ssh access"
+}
+
+
+
 variable app_count {
   description = "App count"
   default     = 2
