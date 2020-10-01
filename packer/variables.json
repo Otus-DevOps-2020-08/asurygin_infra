@@ -1,0 +1,9 @@
+{
+	"folder_id": "b1goa6g1vaq7972e9an1",
+	"service_account_key_file": "./packer-key.json",
+	"source_image_family": "ubuntu-1604-lts",
+    "ssh_username": "ubuntu",
+    "platform_id": "standard-v1",
+    "image_description": "image contains mongodb and ruby",
+    "image_family": "reddit-full"
+}
