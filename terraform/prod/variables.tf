@@ -34,11 +34,11 @@ variable app_count {
 }
 
 variable app_disk_image {
-description = "Disk image for reddit app"
-default = "reddit-app"
+  description = "Disk image for reddit app"
+  default     = "reddit-app"
 }
 
 variable db_disk_image {
   description = "Disk image for reddit db"
-  default = "reddit-db-base"
+  default     = "reddit-db"
 }
