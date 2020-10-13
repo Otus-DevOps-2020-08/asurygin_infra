@@ -16,3 +16,17 @@ variable private_key_path {
 variable db_ip_address {
   description = "Database ip address"
 }
+
+variable name {
+  description = "Database ip address"
+  default = "reddit-app"
+}
+
+variable hostname {
+  description = "Database ip address"
+  default = "reddit-app"
+}
+
+variable template {
+  default = "/home/asurygin/Gitlab/asurygin_infra/terraform/modules/template"
+}

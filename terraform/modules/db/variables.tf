@@ -12,3 +12,13 @@ variable subnet_id {
 variable private_key_path {
   description = "private_key_path"
 }
+
+variable name {
+  description = "Database ip address"
+  default = "reddit-db"
+}
+
+variable hostname {
+  description = "Database ip address"
+  default = "reddit-db"
+}
