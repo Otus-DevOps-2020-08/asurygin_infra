@@ -3,6 +3,7 @@
 * Пересобраны образы packer с использованием ansible. Из json файлов было убраны скрипты
 * Из terrafrom module, app, db убраны provishener
 
+
 ## Домашние задание № 10
 
 * Ansible выполнит команду
