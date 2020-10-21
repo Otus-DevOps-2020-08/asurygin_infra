@@ -1,3 +1,8 @@
+## Домашние задание № 11
+* Были написаны yml файлы app,db, site,  reddit_app_multiple_plays, reddit_app_one_play
+* Пересобраны образы packer с использованием ansible. Из json файлов было убраны скрипты
+* Из terrafrom module, app, db убраны provishener
+
 ## Домашние задание № 10
 
 * Ansible выполнит команду
