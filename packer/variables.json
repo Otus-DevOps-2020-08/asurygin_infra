@@ -5,5 +5,5 @@
     "ssh_username": "ubuntu",
     "platform_id": "standard-v1",
     "image_description": "image contains mongodb and ruby",
-    "image_family": "reddit-db"
+    "image_family": "reddit"
 }
