@@ -1,0 +1,32 @@
+---
+   -  name: Install mongodb
+      hosts: all
+      become: true
+      tasks:
+         - name: Install repo mongodb
+           apt_key:
+             url: https://www.mongodb.org/static/pgp/server-4.2.asc
+             state: present
+
+         - name: Add repo mongodb
+           apt_repository:
+             repo: deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.2 multiverse
+             state: present
+
+         - name: Update cache
+           apt:
+             update_cache: yes
+
+         - name: Install packages
+           apt:
+             update_cache: yes
+             name:
+                - apt-transport-https
+                - libcurl3-gnutls
+                - ca-certificates
+                - mongodb-org
+
+         - name: Configure systemd service
+           systemd:
+             name: mongod
+             enabled: yes
